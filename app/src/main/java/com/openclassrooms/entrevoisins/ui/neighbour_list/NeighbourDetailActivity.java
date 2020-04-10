@@ -1,6 +1,7 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +36,8 @@ public class NeighbourDetailActivity extends AppCompatActivity {
     TextView facebook;
     @BindView(R.id.activity_detail_text_a_propos)
     TextView a_propos;
-
+    @BindView(R.id.activity_detail_fab_favori)
+    FloatingActionButton favori;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,5 +69,15 @@ public class NeighbourDetailActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        favori.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("abc");;
+            }
+        });
+
+
+
+
     }
 }

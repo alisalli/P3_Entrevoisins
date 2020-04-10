@@ -24,6 +24,7 @@ public class ListNeighbourActivity extends AppCompatActivity {
     ViewPager mViewPager;
 
     ListNeighbourPagerAdapter mPagerAdapter;
+    static final String BUNDLE_NEIGHBOOUR = "BUNDLE_NEIGHBOUR";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +38,5 @@ public class ListNeighbourActivity extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
-    }
-
-    @OnClick(R.id.add_neighbour)
-    void addNeighbour() {
-        AddNeighbourActivity.navigate(this);
     }
 }
